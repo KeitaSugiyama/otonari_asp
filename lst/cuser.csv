@@ -1,0 +1,16 @@
+id,char,8,,Const,
+name,varchar,32,Null,Null,
+zip1,char,3,Null,Null,/^[\d]*$/
+zip2,char,4,Nullset:zip1,Nullset:zip1,/^[\d]*$/
+adds,char,4,Null/Intable:prefectures,Null/Intable:prefectures,
+add_sub,varchar,255,Null,Null,
+tel,varchar,15,Null,Null,/^[\d]+([\-\d]*)+$/
+fax,varchar,15,,,/^[\d]+([\-\d]*)+$/
+mail,varchar,128,Null/Mail/MailDup/ChangeFlag:ConfirmInput:mail_confirm,Null/Mail/MailDup/ChangeFlag:ConfirmInput:mail_confirm,
+pass,varchar,128,Null/ChangeFlag:ConfirmInput:pass_confirm,Null/ChangeFlag:ConfirmInput:pass_confirm,
+activate,int,,,AdminData,
+mail_reception,varchar,32,,,
+is_mobile,boolean,,,Const,
+limits,timestamp,,,Const,
+regist,timestamp,,,Const,
+logout,timestamp,,,Const,

@@ -1,0 +1,84 @@
+<div id="contents">
+
+<!--# include head #-->
+
+<!--# include side_bar #-->
+
+<div id="inc_side_body">
+<div class="topics">HOME</div>
+    
+    <div class="topics_list">
+    <dl>
+    <dt><!--# value name #-->様<!--# ecode hello #--></dt>
+    <dd>
+    	<ul>
+        	<li>登録広告数は<span><!--# code getRow adwares cuser = (!--# value id #--) #-->個</span>です。</li>
+        	<li>クローズド広告数は<span><!--# code getRow secretAdwares cuser = (!--# value id #--) #-->個</span>です。</li>
+        </ul>
+    </dd>
+    </dl>
+    </div><!--topics_list_END-->
+
+    <div class="topics_list">
+        <div class="common_black">
+            <table class="common_table_black">
+            	<tr>
+                	<th class="common_info" width="50%">集計項目</th>
+                    <th class="common_info" width="25%">今月</th>
+                    <th class="common_info">先月</th>
+                </tr>
+                <tr>
+                	<td>広告アクセス数</td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=access&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&registA=(!--# ecode createEpochTime  mt #--)&registB=top"><!--# code getRow access cuser = (!--# value id #--) regist > (!--# ecode createEpochTime  mt #--) #--></a></span>　回</p></td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=access&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&registA=(!--# ecode createEpochTime  mt-1 #--)&registB=(!--# ecode createEpochTime  me-1 #--)"><!--# code getRow access cuser = (!--# value id #--) regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--></a></span>　回</p></td>
+                </tr>
+                <tr>
+                	<td>クリック広告成果数</td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=click_pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt #--)&registB=top"><!--# code getRow click_pay cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt #--) #--></a></span>　件</p></td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=click_pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt-1 #--)&registB=(!--# ecode createEpochTime  me-1 #--)"><!--# code getRow click_pay cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--></a></span>　件</p></td>
+                </tr>
+                <tr>
+                    <td>クリック広告成果額</td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=click_pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt #--)&registB=top"><!--# code getSum click_pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt #--) #--></a></span>　円</p></td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=click_pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt-1 #--)&registB=(!--# ecode createEpochTime  me-1 #--)"><!--# code getSum click_pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--></a></span>　円</p></td>
+                </tr>
+                <tr>
+                	<td>アフィリエイト広告成果数</td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt #--)&registB=top"><!--# code getRow pay cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt #--) #--></a></span>　件</p></td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt-1 #--)&registB=(!--# ecode createEpochTime  me-1 #--)"><!--# code getRow pay cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--></a></span>　件</p></td>
+                </tr>
+                <tr>
+                    <td>アフィリエイト広告成果額</td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt #--)&registB=top"><!--# code getSum pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt #--) #--></a></span>　円</p></td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt-1 #--)&registB=(!--# ecode createEpochTime  me-1 #--)"><!--# code getSum pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--></a></span>　円</p></td>
+                </tr>
+                <tr>
+                	<td>継続広告成果数</td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=continue_pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt #--)&registB=top"><!--# code getRow continue_pay cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt #--) #--></a></span>　件</p></td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=continue_pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt-1 #--)&registB=(!--# ecode createEpochTime  me-1 #--)"><!--# code getRow continue_pay cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--></a></span>　件</p></td>
+                </tr>
+                <tr>
+                    <td>継続広告成果額</td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=continue_pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt #--)&registB=top"><!--# code getSum continue_pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt #--) #--></a></span>　円</p></td>
+                    <td><p class="right"><span class="num"><a href="search.php?type=continue_pay&run=true&cuser=(!--# value id #--)&cuser_PAL%5B%5D=match+comp&regist=bt&regist_PAL[]=match+between&state=2&state_PAL[]=match+comp&registA=(!--# ecode createEpochTime  mt-1 #--)&registB=(!--# ecode createEpochTime  me-1 #--)"><!--# code getSum continue_pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--></a></span>　円</p></td>
+                </tr>
+                <tr>
+                    <td>広告成果総額</td>
+                    <td><p class="right"><span class="num"><!--# calc (!--# code getSum pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt #--) #--)+(!--# code getSum click_pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt #--) #--)+(!--# code getSum continue_pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt #--) #--) #--></span>　円</p></td>
+                    <td><p class="right"><span class="num"><!--# calc (!--# code getSum pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--)+(!--# code getSum click_pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--)+(!--# code getSum continue_pay cost cuser = (!--# value id #--) state = 2 regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--) #--></span>　円</p></td>
+                </tr>
+                <tr>
+                    <td>ティア合計</td>
+                    <td><p class="right"><span class="num"><!--# code getSum tier cost cuser = (!--# value id #--) regist > (!--# ecode createEpochTime  mt #--) #--></span>　円</p></td>
+                    <td><p class="right"><span class="num"><!--# code getSum tier cost cuser = (!--# value id #--) regist > (!--# ecode createEpochTime  mt-1 #--) regist < (!--# ecode createEpochTime  me-1 #--) #--></span>　円</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div><!--inc_side_body_END-->
+
+<br class="clear">
+
+<!--フルワイドコンテンツはココに入る事ができる-->
+</div><!--contents_END-->

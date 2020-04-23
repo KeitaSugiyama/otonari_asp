@@ -1,0 +1,102 @@
+<!--blocks-->
+<!--# setTimeFormat Y/m/d/\ G:i:s #-->
+
+<div class="as">
+    <div class="adwares_list">
+    <table class="adwares_list_table">	
+        <tr>
+            <th colspan="2" class="list_head">広告ID：<!--# value id #--></th>
+        </tr>
+        <tr>
+        	<th>広告名</th>
+            <td><a href="edit.php?type=secretAdwares&id=(!--# value id #--)"><!--# value name #--></a></td>
+        </tr>
+        <tr>
+            <th width="20%">広告カテゴリー</th>
+            <td><!--# alias category category id name #--></td>
+        </tr>
+        <tr>
+            <th>成果報酬</th>
+            <td><!--# ecode getCostType money (!--# value money #--) (!--# value ad_type #--) #--></td>
+        </tr>
+        <tr>
+            <th>クリック報酬</th>
+            <td><!--# value click_money #-->円</td>
+        </tr>
+        <tr>
+            <th>継続課金</th>
+            <td><!--# value continue_money #--><!--# valueReplace continue_type yen/per 円/％ #--></td>
+        </tr>
+<!--# ifbegin ! bool url_users #-->
+        <tr>
+            <th>URL(PC用)</th>
+            <td><!--# value url #--></td>
+        </tr>
+		<!--# ifbegin enableMobile #-->
+        <tr>
+            <th>URL(携帯用)</th>
+            <td><!--# value url_m #--></td>
+        </tr>
+		<!--# endif #-->
+<!--# else #-->
+        <tr>
+            <th>URL</th>
+            <td>アフィリエイターの自由入力</td>
+        </tr>
+<!--# endif #-->
+        <tr>
+        	<th>広告バナー画像</th>
+            <td><div class="ad_image"><!--# object image banner #--></div></td>
+        </tr>
+        <tr>
+        	<th>広告の説明</th>
+            <td class="adwares_info"><!--# value comment #--></td>
+        </tr>
+<!--# ifbegin eq check_type aid #-->
+	<!--# ifbegin ! nullcheck continue_money #-->
+	        <tr>
+	        	<th>個別トラッキングコード</th>
+	            <td>
+					▼リンク先ページに貼り付け<br />
+					<textarea class="url"><script src="(!--# ecode getSiteProfile home #--)mark.js"></script></textarea><br />
+					▼サンクスページに貼り付け<br />
+					<textarea class="url"><script src="(!--# ecode getSiteProfile home #--)add.php?r=done&check=(!--# ecode getSiteProfile adwares_pass #--)&s_adwares=(!--# value id #--)"></script></textarea>
+				</td>
+	        </tr>
+	<!--# else #-->
+	        <tr>
+	        	<th>継続課金用トラッキングコード</th>
+	            <td>
+					▼リンク先ページに貼り付け<br />
+					<textarea class="url"><script src="(!--# ecode getSiteProfile home #--)mark.js"></script></textarea><br />
+					▼サンクスページに貼り付け<br />
+					<textarea class="url"><script src="(!--# ecode getSiteProfile home #--)add.php?r=done&check=(!--# ecode getSiteProfile adwares_pass #--)&s_adwares=(!--# value id #--)&uid=[任意のユニークIDを設定してください]"></script></textarea>
+				</td>
+	        </tr>
+	        <tr>
+	        	<th>継続課金用トラッキングコード(継続)</th>
+	            <td><textarea class="url">&lt;img src="(!--# ecode getSiteProfile home #--)continue.php?check=(!--# ecode getSiteProfile adwares_pass #--)&amp;s_adwares=(!--# value id #--)&amp;uid=[任意のユニークIDを設定してください]" width="1" height="1"&gt;</textarea></td>
+	        </tr>
+	<!--# endif #-->
+<!--# else #-->
+	<!--# ifbegin ! nullcheck continue_money #-->
+	        <tr>
+	        	<th>個別トラッキングコード</th>
+	            <td><textarea class="url">&lt;img src="(!--# ecode getSiteProfile home #--)add.php?check=(!--# ecode getSiteProfile adwares_pass #--)&amp;s_adwares=(!--# value id #--)" width="1" height="1"&gt;</textarea></td>
+	        </tr>
+	<!--# else #-->
+	        <tr>
+	        	<th>継続課金用トラッキングコード</th>
+	            <td><textarea class="url">&lt;img src="(!--# ecode getSiteProfile home #--)add.php?check=(!--# ecode getSiteProfile adwares_pass #--)&amp;s_adwares=(!--# value id #--)&amp;uid=[任意のユニークIDを設定してください]" width="1" height="1"&gt;</textarea></td>
+	        </tr>
+	        <tr>
+	        	<th>継続課金用トラッキングコード(継続)</th>
+	            <td><textarea class="url">&lt;img src="(!--# ecode getSiteProfile home #--)continue.php?check=(!--# ecode getSiteProfile adwares_pass #--)&amp;s_adwares=(!--# value id #--)&amp;uid=[任意のユニークIDを設定してください]" width="1" height="1"&gt;</textarea></td>
+	        </tr>
+	<!--# endif #-->
+<!--# endif #-->
+    </table>
+    </div>
+
+</div>
+<!--blocks_END-->

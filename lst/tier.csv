@@ -1,0 +1,11 @@
+id,char,33,,Const
+owner,char,8,,Const
+cuser,char,8,,Const
+tier,char,8,,Const
+adwares,char,8,,Const
+cost,int,,,AdminData
+tier1,int,,,AdminData
+tier2,int,,,AdminData
+tier3,int,,,AdminData
+report_id,char,8,,
+regist,timestamp,,,Const
